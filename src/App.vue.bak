@@ -1,0 +1,87 @@
+<template>
+    <v-app toolbar style="height:100%;overflow:hidden;">
+        <v-navigation-drawer permanent light style="width:200px;margin-top:50px;">
+            <v-list dense class="pt-2">
+                <v-list-tile v-for="item in items" :key="item.title" @click="">
+                    <v-list-tile-action style="min-width:32px;">
+                        <v-icon style="font-size:20px;">{{ item.icon }}</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title style="font-weight:600;font-size:14px;color:#666;">{{ item.title }}</v-list-tile-title>
+                    </v-list-tile-content>
+                    <v-list-tile-action class="mr-2">
+                        <v-list-tile-action-text style="font-weight:600;font-size:14px;color:#d93d5e;">{{ item.action }}</v-list-tile-action-text>
+                    </v-list-tile-action>
+                </v-list-tile>
+            </v-list>
+        </v-navigation-drawer>
+        <v-toolbar fixed dark flat style="background-color:#009dc7;background-image:url(public/bg.jpg);">
+            <v-toolbar-title style="font-weight:600;font-size:18px;color:#fff;">江苏通月空调有限公司</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+                <v-btn flat class="toolbar-right-btn">注册</v-btn>
+                <v-btn flat class="toolbar-right-btn">登录</v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+        <main style="padding-left:200px;padding-top:50px;overflow-y:hidden;">
+            <v-container fluid style="padding:0;background-color:#fff;overflow-y:hidden;">
+                <div style="height:100%;width:360px;overflow-x:hidden;overflow-y:auto;">
+            <v-list dense class="pt-2">
+                <v-list-tile v-for="item in items" :key="item.title" @click="">
+                    <v-list-tile-action style="min-width:32px;">
+                        <v-icon style="font-size:20px;">{{ item.icon }}</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                        <v-list-tile-title style="font-weight:600;font-size:14px;color:#666;">{{ item.title }}</v-list-tile-title>
+                    </v-list-tile-content>
+                    <v-list-tile-action class="mr-2">
+                        <v-list-tile-action-text style="font-weight:600;font-size:14px;color:#d93d5e;">{{ item.action }}</v-list-tile-action-text>
+                    </v-list-tile-action>
+                </v-list-tile>
+            </v-list>
+                </div>
+                <!--v-router-->
+            </v-container>
+        </main>
+    </v-app>
+</template>
+
+<script>
+export default {
+    data () {
+        return {
+            drawer: null,
+            items: [
+                { 
+                    title: '任务',
+                    href: '/task',
+                    icon: 'layers',
+                    action: 99
+                },
+                { 
+                    title: '项目', icon: 'dashboard' },
+            { title: '团队', icon: 'group' },
+            { title: '产品', icon: 'camera' },
+            { title: '客户', icon: 'language' },
+            { title: '供应商', icon: 'unarchive', action: 8 },
+            { title: '设备', icon: 'iso' },
+            { title: '库存', icon: 'dns', action: 12 },
+            { title: '报表', icon: 'assessment' },
+            { title: '设置', icon: 'settings' },
+            { title: '帮助', icon: 'school' },
+            /*
+            { title: '任务', icon: 'casino' },
+            { title: '任务', icon: 'apps' },
+            { title: '任务', icon: 'widgets' },
+            { title: '任务', icon: 'border_all' },
+            { title: '任务', icon: 'add_box' },
+            { title: '任务', icon: 'font_download' },
+            { title: '报表', icon: 'archive' },
+            { title: '报表', icon: 'account_box' },
+            */
+            ],
+            right: null
+        }
+    }
+}
+</script>

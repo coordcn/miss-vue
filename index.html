@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-y:hidden;">
+<head>
+    <title>云工暖通</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="public/favicon-32x32.png" sizes="32x32">
+    <style type="text/css">
+        a:focus, button:focus{
+            outline:0 !important;
+        }
+
+        button::-moz-focus-inner,input::-moz-focus-inner {
+	        padding:0;
+	        border:0
+        }
+
+        .tabs__slider {
+            transition:0s !important;
+            height:3px !important;
+        }
+
+        .menu_title {
+            font-weight:600;
+            font-size:15px;
+        }
+
+        .column {
+            height:100%;
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .row {
+            width:100%;
+            height:100%;
+            overflow:hidden;
+            display:flex;
+            flex-flow:row nowrap;
+            align-items:stretch;
+        }
+
+        .tabbar {
+            width:100%;
+            height:50px;
+            display:flex;
+            flex:0 0 auto;
+        }
+
+        .main {
+            width:100%;
+            height:100%;
+            flex:1;
+            overflow:hidden;
+        }
+
+        .menu {
+            height:100%;
+            display:flex;
+            flex-flow:column;
+            flex:0 0 auto;
+            overflow-y:auto;
+            border-right:1px solid rgba(0,0,0,0.12);
+        }
+
+        .content {
+            height:100%;
+            display:flex;
+            flex-flow:column;
+            flex:1 1 auto;
+            overflow-y:auto;
+        }
+
+        .toolbar__content {
+            height:50px !important;
+        }
+
+        .toolbar-right-btn {
+            font-weight:600 !important;
+            font-size:15px !important;
+            min-width: 56px !important;
+        }
+
+        .tabs__items {
+            height:calc(100% - 48px);
+        }
+    </style>
+</head>
+<body style="font-family:'Microsoft YaHei','微软雅黑','WenQuanYi Micro Hei',文泉驿微米黑,STHeiti,'Roboto',sans-serif;width:100%;height:100%;min-width:1008px;overflow:auto;overflow-y:hidden;">
+    <div id="app"></div>
+    <script src="./dist/build.js"></script>
+</body>
+</html>
